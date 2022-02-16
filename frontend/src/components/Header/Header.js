@@ -9,12 +9,23 @@ import {
 
 
 } from 'react-bootstrap'
-
+import { useDispatch, useSelector } from 'react-redux';
+import { logout } from '../../actions/userActions';
 import { Link, useHistory } from 'react-router-dom'
 
 const Header = () => {
 
     const history = useHistory();
+
+    const dispatch = useDispatch();
+
+    const userLogin = useSelector(state => state.userLogin);
+    const { userInfo } = userLogin;
+
+    const logoutHandler = () => {
+        dispatch(logout());
+        history.push('/');
+    }
     return (
         <Navbar bg="primary" expand="lg" variant="dark">
             <Container fluid>
@@ -48,10 +59,7 @@ const Header = () => {
 
                             <NavDropdown.Item href="#action4">My Profile</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item onClick={() => {
-                                localStorage.removeItem('userInfo');
-                                history.push('/');
-                            }}>
+                            <NavDropdown.Item onClick={logoutHandler}>
                                 Logout
                             </NavDropdown.Item>
                         </NavDropdown>
