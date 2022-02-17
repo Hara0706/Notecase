@@ -46,25 +46,34 @@ const Header = ({ setSearch }) => {
 
                         </Form>
                     </Nav>
-                    <Nav
-                        className="me-auto my-2 my-lg-0"
-                        style={{ maxHeight: '100px' }}
-                        navbarScroll
-                    >
-                        <Nav.Link href="/mynotes">
-                            <Link to='/mynotes'>My Notes</Link>
+                    <Nav>
+                        {userInfo ? (
+                            <>
+                                <Nav.Link href="/mynotes">My Notes</Nav.Link>
+                                <NavDropdown
+                                    title={`${userInfo.name}`}
+                                    id="collasible-nav-dropdown"
+                                >
+                                    <NavDropdown.Item href="/profile">
+                                        {/* <img
+                                         alt=""
+                                         src={`${userInfo.pic}`}
+                                         width="25"
+                                         height="25"
+                                         style={{ marginRight: 10 }}
+                                         /> */}
+                                        My Profile
+                                    </NavDropdown.Item>
 
-                        </Nav.Link>
-
-                        <NavDropdown title="Harapriya Mohapatra" id="navbarScrollingDropdown">
-
-                            <NavDropdown.Item href="#action4">My Profile</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item onClick={logoutHandler}>
-                                Logout
-                            </NavDropdown.Item>
-                        </NavDropdown>
-
+                                    <NavDropdown.Divider />
+                                    <NavDropdown.Item onClick={logoutHandler}>
+                                        Logout
+                                    </NavDropdown.Item>
+                                </NavDropdown>
+                            </>
+                        ) : (
+                            <Nav.Link href="/login">Login</Nav.Link>
+                        )}
                     </Nav>
 
                 </Navbar.Collapse>
