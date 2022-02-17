@@ -8,30 +8,36 @@
 }
 
 .title{
-    font-size: 70px;
-   
+    font-size: 60px;
+    color: rgb(12, 168, 196);
+    text-align: right;
 }
 
 .subtitle{
     font-size: 30px;
     padding-top: 10px;
+    color: rgb(226, 130, 194);
+
 
 }
 
 .intro-text{
     width: 100%;
-    text-align: center;
+    text-align: right;
 }
 
 .buttonContainer{
     margin-top: 50px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content:flex-end;
+    
+    
 }
 
 .landingbutton{
     width: 200px;
     height: 55px;
+    margin: 0 -100px 0 120px;
 }
 
 @media only screen and (min-width: 1200px) {
