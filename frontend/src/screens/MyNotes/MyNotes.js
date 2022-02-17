@@ -104,7 +104,7 @@ const MyNotes = ({ search }) => {
                                     </Badge>
                                 </h4>
                                 <blockquote className="blockquote mb-0">
-                                    <p>{note.content}</p>
+                                    <p>{note.content}</p><br></br>
                                     <footer className="blockquote-footer">
                                         Created On{" "}
                                         <cite title='Source Title'>
