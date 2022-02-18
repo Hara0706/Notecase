@@ -5,31 +5,34 @@
     background-image: url('../../background.jpg');
     background-position: center;
     background-size: cover;
+    opacity: 0.6;
 }
 
 .title{
     font-size: 60px;
-    color: rgb(12, 168, 196);
-    text-align: right;
+    color: rgb(56, 2, 29);
+    text-align: center;
+    
 }
 
 .subtitle{
     font-size: 30px;
     padding-top: 10px;
-    color: rgb(226, 130, 194);
+    color: rgb(56, 2, 29);
 
 
 }
 
 .intro-text{
     width: 100%;
-    text-align: right;
+    text-align: center;
+    
 }
 
 .buttonContainer{
     margin-top: 50px;
     display: flex;
-    justify-content:flex-end;
+    justify-content:space-evenly;
     
     
 }
@@ -37,7 +40,7 @@
 .landingbutton{
     width: 200px;
     height: 55px;
-    margin: 0 -100px 0 120px;
+    
 }
 
 @media only screen and (min-width: 1200px) {
