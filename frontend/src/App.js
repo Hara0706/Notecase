@@ -1,6 +1,9 @@
 // cloudinary API Base URL --->
 // https://api.cloudinary.com/v1_1/dreosjljo/image/upload
 
+// deployed link
+// https://notecase-mern.herokuapp.com/
+
 
 import './App.css';
 import { useState } from 'react';
